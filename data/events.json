@@ -1,6 +1,28 @@
 {
-  "updatedAt": 1792080119211,
+  "updatedAt": 1792080951778,
   "events": [
+    {
+      "ts": 1792080951775,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DWS3ZFF7",
+      "name": "BEYBLADE X ベイブレードX BX-43 ギアケース ホワイトVer.",
+      "price": 198.07,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DWS3ZFF7",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792080951775,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CV7HF3W6",
+      "name": "BEYBLADE X ベイブレードX UX-01 スターター ドランバスター 1-60A",
+      "price": 172.54,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CV7HF3W6",
+      "tag": "UX"
+    },
     {
       "ts": 1792080119209,
       "type": "new",
