@@ -1,6 +1,43 @@
 {
-  "updatedAt": 1792077533362,
+  "updatedAt": 1792078248320,
   "events": [
+    {
+      "ts": 1792078248318,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DWS3ZFF7",
+      "name": "BEYBLADE X ベイブレードX BX-43 ギアケース ホワイトVer.",
+      "price": 198.32,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DWS3ZFF7",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792078248318,
+      "type": "price",
+      "from": 148.74,
+      "to": 172.54,
+      "store": "amazonjp",
+      "sku": "B0HCXR5PWS",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-19 ランダムブースター クロコトレッドセレクト",
+      "price": 172.54,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0HCXR5PWS",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792078248318,
+      "type": "price",
+      "from": 163.61,
+      "to": 162.62,
+      "store": "amazonjp",
+      "sku": "B0GG8QM8YS",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-48 ランダムブースターVol.9",
+      "price": 162.62,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GG8QM8YS",
+      "tag": "BX"
+    },
     {
       "ts": 1792077533359,
       "type": "new",
