@@ -1,6 +1,89 @@
 {
-  "updatedAt": 1792078248320,
+  "updatedAt": 1792079150296,
   "events": [
+    {
+      "ts": 1792079150292,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CY4H1TJD",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
+      "price": 123.95,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CY4H1TJD",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792079150292,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CMZSRJ3Q",
+      "name": "BEYBLADE X ベイブレードX BX-23 スターター フェニックスウイング 9-60GF 金属",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CMZSRJ3Q",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792079150292,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0GWKWBXH3",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-17 ランダムブースター Vol.10",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GWKWBXH3",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792079150292,
+      "type": "price",
+      "from": null,
+      "to": 166.89,
+      "store": "amazonjp",
+      "sku": "B0D6MZB1VF",
+      "name": "BEYBLADE X ベイブレードX BX-34 スターター コバルトドラグーン 2-60C",
+      "price": 166.89,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0D6MZB1VF",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792079150292,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DJQQDFPS",
+      "name": "BEYBLADE X ベイブレードX UX-09 スターター サムライセイバー2-70L",
+      "price": 213.19,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DJQQDFPS",
+      "tag": "UX"
+    },
+    {
+      "ts": 1792079150292,
+      "type": "price",
+      "from": 346.07,
+      "to": 280.18,
+      "store": "amazonjp",
+      "sku": "B0GMF7QZQB",
+      "name": "タカラトミー(TAKARA TOMY) CX-16 スタートダッシュセットC",
+      "price": 280.18,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GMF7QZQB",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792079150292,
+      "type": "price",
+      "from": null,
+      "to": 140.81,
+      "store": "amazonjp",
+      "sku": "B0G1QZR681",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-17 スターター メテオドラグーン3-70J",
+      "price": 140.81,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0G1QZR681",
+      "tag": "UX"
+    },
     {
       "ts": 1792078248318,
       "type": "new",
