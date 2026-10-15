@@ -1,27 +1,27 @@
 {
-  "updatedAt": 1792074651121,
-  "count": 68,
+  "updatedAt": 1792075543921,
+  "count": 75,
   "stores": [
     {
       "id": "tclub",
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5559
+      "ms": 6081
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 13,
-      "ms": 437
+      "ms": 485
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
-      "count": 2,
-      "ms": 1705
+      "count": 9,
+      "ms": 2085
     }
   ],
   "items": {
@@ -568,6 +568,62 @@
       "price": 350,
       "status": "in",
       "url": "https://moonroadhk.com/products/戰鬥陀螺-bbx-beybladex-evangelion-deck-set-pre-order"
+    },
+    "moonroad:4904810097280": {
+      "store": "moonroad",
+      "sku": "4904810097280",
+      "name": "Takara Tomy 爆旋陀螺X - CX-16 啟動衝刺套裝C (附發射器)【港版】",
+      "price": 280,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-cx-16-啟動衝刺套裝c-附發射器-港版-預計-9-10月貨"
+    },
+    "moonroad:4904810910596": {
+      "store": "moonroad",
+      "sku": "4904810910596",
+      "name": "Takara Tomy 爆旋陀螺X - BX-10 極限陀螺盤套裝【港版】",
+      "price": 180,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-bx-10-極限陀螺盤套裝-港版-7月貨"
+    },
+    "moonroad:4904810914495": {
+      "store": "moonroad",
+      "sku": "4904810914495",
+      "name": "Takara Tomy BEYBLADE X UX-03 魔導神杖 5-70DB（港版）",
+      "price": 120,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-ux-03-魔導神杖-5-70db-港版"
+    },
+    "moonroad:pre-order-takara-tomy-x-bx-23-9-60gf": {
+      "store": "moonroad",
+      "sku": "pre-order-takara-tomy-x-bx-23-9-60gf",
+      "name": "Takara Tomy 爆旋陀螺X - BX-23 鳳凰飛翼9-60GF【港版】",
+      "price": 150,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-x-bx-23-9-60gf"
+    },
+    "moonroad:4904810913320": {
+      "store": "moonroad",
+      "sku": "4904810913320",
+      "name": "Takara Tomy 爆旋陀螺X - BX-25 陀螺及配件收納箱【港版】",
+      "price": 150,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-bx-25-陀螺及配件收納箱-港版-7月貨"
+    },
+    "moonroad:4904810096122": {
+      "store": "moonroad",
+      "sku": "4904810096122",
+      "name": "Takara Tomy 爆旋陀螺X - BX-49 蒼龍突擊(附發射器) 4-50FF【港版",
+      "price": 100,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/takara-tomy-爆旋陀螺x-bx-45-武士聖劍-b6-70m-副本"
+    },
+    "moonroad:pre-order-takara-tomy-爆旋陀螺x-bx-48-隨機陀螺-vol-9-隨機1款-港版": {
+      "store": "moonroad",
+      "sku": "pre-order-takara-tomy-爆旋陀螺x-bx-48-隨機陀螺-vol-9-隨機1款-港版",
+      "name": "Takara Tomy 爆旋陀螺X - BX-48 隨機陀螺 Vol.9 (隨機1款)【港版】",
+      "price": 95,
+      "status": "out",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-bx-48-隨機陀螺-vol-9-隨機1款-港版"
     }
   }
 }
