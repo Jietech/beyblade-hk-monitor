@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1792091749097,
+  "updatedAt": 1792092650402,
   "count": 120,
   "stores": [
     {
@@ -7,35 +7,35 @@
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5548
+      "ms": 5443
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 13,
-      "ms": 410
+      "ms": 449
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 9,
-      "ms": 433
+      "ms": 1653
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
       "count": 45,
-      "ms": 1435
+      "ms": 1600
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": 183
+      "ms": 145
     }
   ],
   "items": {
@@ -827,7 +827,7 @@
       "store": "amazonjp",
       "sku": "B0DC66WCDV",
       "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-36 ランダムブースター ホエールウェーブセレクト",
-      "price": null,
+      "price": 69.41,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0DC66WCDV"
     },
@@ -867,7 +867,7 @@
       "store": "amazonjp",
       "sku": "B0DWSB1VDQ",
       "name": "BEYBLADE X ベイブレードX BX-42 ラバーカスタムグリップ ブルーVer.",
-      "price": null,
+      "price": 93.16,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0DWSB1VDQ"
     },

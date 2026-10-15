@@ -1,6 +1,32 @@
 {
-  "updatedAt": 1792091749098,
+  "updatedAt": 1792092650404,
   "events": [
+    {
+      "ts": 1792092650401,
+      "type": "price",
+      "from": null,
+      "to": 93.16,
+      "store": "amazonjp",
+      "sku": "B0DWSB1VDQ",
+      "name": "BEYBLADE X ベイブレードX BX-42 ラバーカスタムグリップ ブルーVer.",
+      "price": 93.16,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DWSB1VDQ",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792092650401,
+      "type": "price",
+      "from": null,
+      "to": 69.41,
+      "store": "amazonjp",
+      "sku": "B0DC66WCDV",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-36 ランダムブースター ホエールウェーブセレクト",
+      "price": 69.41,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DC66WCDV",
+      "tag": "BX"
+    },
     {
       "ts": 1792091749096,
       "type": "new",
