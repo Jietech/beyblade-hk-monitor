@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1792086350838,
+  "updatedAt": 1792087250562,
   "count": 120,
   "stores": [
     {
@@ -7,35 +7,35 @@
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5563
+      "ms": 5539
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 13,
-      "ms": 392
+      "ms": -257
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 9,
-      "ms": 1721
+      "ms": 2037
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
       "count": 45,
-      "ms": 1657
+      "ms": 1439
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": 178
+      "ms": 360
     }
   ],
   "items": {
@@ -719,14 +719,6 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GMFHY6ZV"
     },
-    "amazonjp:B0C533Q31X": {
-      "store": "amazonjp",
-      "sku": "B0C533Q31X",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
-      "price": 64.45,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0C533Q31X"
-    },
     "amazonjp:B0H4PPV8MR": {
       "store": "amazonjp",
       "sku": "B0H4PPV8MR",
@@ -734,6 +726,14 @@
       "price": null,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0H4PPV8MR"
+    },
+    "amazonjp:B0C533Q31X": {
+      "store": "amazonjp",
+      "sku": "B0C533Q31X",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
+      "price": 64.45,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0C533Q31X"
     },
     "amazonjp:B0GS4F6977": {
       "store": "amazonjp",
@@ -750,6 +750,14 @@
       "price": 322.37,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GP22FMHL"
+    },
+    "amazonjp:B0HJ7CPXJ6": {
+      "store": "amazonjp",
+      "sku": "B0HJ7CPXJ6",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-56 ストリングランチャーL ホワイト×バイオレット",
+      "price": 54.54,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0HJ7CPXJ6"
     },
     "amazonjp:B0FV74J4H5": {
       "store": "amazonjp",
@@ -783,14 +791,6 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0CKQSX6CS"
     },
-    "amazonjp:B0GMDYS21K": {
-      "store": "amazonjp",
-      "sku": "B0GMDYS21K",
-      "name": "タカラトミー(TAKARA TOMY) CX-14 スターター ナイトフォートレスGV8-70UN",
-      "price": null,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0GMDYS21K"
-    },
     "amazonjp:B0DJQQDFPS": {
       "store": "amazonjp",
       "sku": "B0DJQQDFPS",
@@ -798,6 +798,14 @@
       "price": 213.19,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0DJQQDFPS"
+    },
+    "amazonjp:B0GMDYS21K": {
+      "store": "amazonjp",
+      "sku": "B0GMDYS21K",
+      "name": "タカラトミー(TAKARA TOMY) CX-14 スターター ナイトフォートレスGV8-70UN",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GMDYS21K"
     },
     "amazonjp:B0HCXR5PWS": {
       "store": "amazonjp",
@@ -878,14 +886,6 @@
       "price": 280.18,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GMF7QZQB"
-    },
-    "amazonjp:B0HJ7CPXJ6": {
-      "store": "amazonjp",
-      "sku": "B0HJ7CPXJ6",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-56 ストリングランチャーL ホワイト×バイオレット",
-      "price": 54.54,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0HJ7CPXJ6"
     },
     "amazonjp:B0F8MV4KVC": {
       "store": "amazonjp",
