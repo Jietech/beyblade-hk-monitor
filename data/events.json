@@ -1,6 +1,30 @@
 {
-  "updatedAt": 1792089951728,
+  "updatedAt": 1792090956623,
   "events": [
+    {
+      "ts": 1792090956621,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CY4H1TJD",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
+      "price": 123.95,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CY4H1TJD",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792090956621,
+      "type": "price",
+      "from": 158.66,
+      "to": 155.68,
+      "store": "amazonjp",
+      "sku": "B0GMF1DTFB",
+      "name": "タカラトミー(TAKARA TOMY) CX-13 スターター バハムートブリッツBK1-50I",
+      "price": 155.68,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GMF1DTFB",
+      "tag": "CX"
+    },
     {
       "ts": 1792089951726,
       "type": "new",

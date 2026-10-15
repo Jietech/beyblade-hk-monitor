@@ -1,41 +1,41 @@
 {
-  "updatedAt": 1792089951726,
-  "count": 121,
+  "updatedAt": 1792090956621,
+  "count": 120,
   "stores": [
     {
       "id": "tclub",
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5505
+      "ms": 5525
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 13,
-      "ms": 460
+      "ms": 484
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 9,
-      "ms": 1605
+      "ms": 2522
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
-      "count": 46,
-      "ms": 2803
+      "count": 45,
+      "ms": 1606
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": 179
+      "ms": 203
     }
   ],
   "items": {
@@ -667,7 +667,7 @@
       "store": "amazonjp",
       "sku": "B0GMF1DTFB",
       "name": "タカラトミー(TAKARA TOMY) CX-13 スターター バハムートブリッツBK1-50I",
-      "price": 158.66,
+      "price": 155.68,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GMF1DTFB"
     },
@@ -711,14 +711,6 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GMFHY6ZV"
     },
-    "amazonjp:B0C533Q31X": {
-      "store": "amazonjp",
-      "sku": "B0C533Q31X",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
-      "price": 64.45,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0C533Q31X"
-    },
     "amazonjp:B0H4PPV8MR": {
       "store": "amazonjp",
       "sku": "B0H4PPV8MR",
@@ -734,6 +726,14 @@
       "price": 322.37,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GP22FMHL"
+    },
+    "amazonjp:B0C533Q31X": {
+      "store": "amazonjp",
+      "sku": "B0C533Q31X",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
+      "price": 64.45,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0C533Q31X"
     },
     "amazonjp:B0GS4F6977": {
       "store": "amazonjp",
@@ -839,14 +839,6 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0C52SMHWN"
     },
-    "amazonjp:B0H29KKBCY": {
-      "store": "amazonjp",
-      "sku": "B0H29KKBCY",
-      "name": "Hasbro ベイブレード X バロー バイソン FB UX インフィニティ スターターパック セット タカラトミー スピニングトップ (耐久タイプ) & スターター バトルスピナーゲーム おもちゃ 8歳から",
-      "price": 337.69,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0H29KKBCY"
-    },
     "amazonjp:B0GP35J9H5": {
       "store": "amazonjp",
       "sku": "B0GP35J9H5",
@@ -854,6 +846,14 @@
       "price": 292.42,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GP35J9H5"
+    },
+    "amazonjp:B0H29KKBCY": {
+      "store": "amazonjp",
+      "sku": "B0H29KKBCY",
+      "name": "Hasbro ベイブレード X バロー バイソン FB UX インフィニティ スターターパック セット タカラトミー スピニングトップ (耐久タイプ) & スターター バトルスピナーゲーム おもちゃ 8歳から",
+      "price": 337.69,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0H29KKBCY"
     },
     "amazonjp:B0CMZQ9157": {
       "store": "amazonjp",
@@ -991,21 +991,13 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0CMZSRJ3Q"
     },
-    "amazonjp:B0DWSRHP7J": {
+    "amazonjp:B0CY4H1TJD": {
       "store": "amazonjp",
-      "sku": "B0DWSRHP7J",
-      "name": "BEYBLADE X ベイブレードX CX-02 スターター ウィザードアーク R4-55LO",
-      "price": null,
+      "sku": "B0CY4H1TJD",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
+      "price": 123.95,
       "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0DWSRHP7J"
-    },
-    "amazonjp:B0DHSD22WP": {
-      "store": "amazonjp",
-      "sku": "B0DHSD22WP",
-      "name": "ベイブレード セット",
-      "price": null,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0DHSD22WP"
+      "url": "https://www.amazon.co.jp/dp/B0CY4H1TJD"
     }
   }
 }
