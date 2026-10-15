@@ -1,6 +1,19 @@
 {
-  "updatedAt": 1792103447581,
+  "updatedAt": 1792104347290,
   "events": [
+    {
+      "ts": 1792104347288,
+      "type": "price",
+      "from": null,
+      "to": 63.94,
+      "store": "amazonjp",
+      "sku": "B000069U3V",
+      "name": "次世代ベーゴマバトル ベイブレード",
+      "price": 63.94,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B000069U3V",
+      "tag": "OTHER"
+    },
     {
       "ts": 1792103447578,
       "type": "new",
