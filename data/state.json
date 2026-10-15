@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1792062944677,
+  "updatedAt": 1792063845235,
   "count": 75,
   "stores": [
     {
@@ -7,21 +7,21 @@
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5500
+      "ms": 5518
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 13,
-      "ms": 564
+      "ms": 519
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 9,
-      "ms": 2088
+      "ms": 2039
     }
   ],
   "items": {
