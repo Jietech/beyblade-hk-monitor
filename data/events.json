@@ -1,6 +1,17 @@
 {
-  "updatedAt": 1792104347290,
+  "updatedAt": 1792105249970,
   "events": [
+    {
+      "ts": 1792105249968,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DHSD22WP",
+      "name": "ベイブレード セット",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DHSD22WP",
+      "tag": "OTHER"
+    },
     {
       "ts": 1792104347288,
       "type": "price",

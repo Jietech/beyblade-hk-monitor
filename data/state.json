@@ -1,41 +1,41 @@
 {
-  "updatedAt": 1792104347289,
-  "count": 120,
+  "updatedAt": 1792105249968,
+  "count": 121,
   "stores": [
     {
       "id": "tclub",
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5819
+      "ms": 5450
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 13,
-      "ms": 490
+      "ms": 501
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 9,
-      "ms": 1571
+      "ms": 1693
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
-      "count": 45,
-      "ms": 1717
+      "count": 46,
+      "ms": 1524
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": 158
+      "ms": 189
     }
   ],
   "items": {
@@ -743,6 +743,14 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0DJQQDFPS"
     },
+    "amazonjp:B0FV74J4H5": {
+      "store": "amazonjp",
+      "sku": "B0FV74J4H5",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-10 ブースター ウルフハントF0-60DB",
+      "price": 149.04,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0FV74J4H5"
+    },
     "amazonjp:B0FCLJ67NK": {
       "store": "amazonjp",
       "sku": "B0FCLJ67NK",
@@ -758,14 +766,6 @@
       "price": 323.02,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GP22FMHL"
-    },
-    "amazonjp:B0FV74J4H5": {
-      "store": "amazonjp",
-      "sku": "B0FV74J4H5",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-10 ブースター ウルフハントF0-60DB",
-      "price": 149.04,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0FV74J4H5"
     },
     "amazonjp:B0GS4F6977": {
       "store": "amazonjp",
@@ -943,14 +943,6 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0D3TG743N"
     },
-    "amazonjp:B0FH4FF4NJ": {
-      "store": "amazonjp",
-      "sku": "B0FH4FF4NJ",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-45 ブースター サムライカリバー6-70M",
-      "price": 172.89,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0FH4FF4NJ"
-    },
     "amazonjp:B0G1R71G2F": {
       "store": "amazonjp",
       "sku": "B0G1R71G2F",
@@ -958,6 +950,14 @@
       "price": 207.66,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0G1R71G2F"
+    },
+    "amazonjp:B0FH4FF4NJ": {
+      "store": "amazonjp",
+      "sku": "B0FH4FF4NJ",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-45 ブースター サムライカリバー6-70M",
+      "price": 172.89,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0FH4FF4NJ"
     },
     "amazonjp:B0CMZSRJ3Q": {
       "store": "amazonjp",
@@ -995,9 +995,17 @@
       "store": "amazonjp",
       "sku": "B000069U3V",
       "name": "次世代ベーゴマバトル ベイブレード",
-      "price": 63.94,
+      "price": null,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B000069U3V"
+    },
+    "amazonjp:B0DHSD22WP": {
+      "store": "amazonjp",
+      "sku": "B0DHSD22WP",
+      "name": "ベイブレード セット",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DHSD22WP"
     }
   }
 }
