@@ -1,6 +1,67 @@
 {
-  "updatedAt": 1792080951778,
+  "updatedAt": 1792081851752,
   "events": [
+    {
+      "ts": 1792081851750,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CMZSRJ3Q",
+      "name": "BEYBLADE X ベイブレードX BX-23 スターター フェニックスウイング 9-60GF 金属",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CMZSRJ3Q",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792081851750,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DJQQDFPS",
+      "name": "BEYBLADE X ベイブレードX UX-09 スターター サムライセイバー2-70L",
+      "price": 213.19,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DJQQDFPS",
+      "tag": "UX"
+    },
+    {
+      "ts": 1792081851750,
+      "type": "price",
+      "from": 276.66,
+      "to": 287.56,
+      "store": "amazonjp",
+      "sku": "B0CKQSX6CS",
+      "name": "BEYBLADE X ベイブレードX BX-20 ドランダガーデッキセット 金属",
+      "price": 287.56,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CKQSX6CS",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792081851750,
+      "type": "price",
+      "from": null,
+      "to": 109.08,
+      "store": "amazonjp",
+      "sku": "B0GMDYS21K",
+      "name": "タカラトミー(TAKARA TOMY) CX-14 スターター ナイトフォートレスGV8-70UN",
+      "price": 109.08,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GMDYS21K",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792081851750,
+      "type": "price",
+      "from": 162.62,
+      "to": 172.54,
+      "store": "amazonjp",
+      "sku": "B0CV7D5B6K",
+      "name": "BEYBLADE X ベイブレードX UX-03 ブースター ウィザードロッド 5-70DB",
+      "price": 172.54,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CV7D5B6K",
+      "tag": "UX"
+    },
     {
       "ts": 1792080951775,
       "type": "new",
