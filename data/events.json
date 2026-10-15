@@ -1,6 +1,52 @@
 {
-  "updatedAt": 1792083655335,
+  "updatedAt": 1792084551658,
   "events": [
+    {
+      "ts": 1792084551656,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0GP35J9H5",
+      "name": "ベイブレード X デラックスランチャー 2パック",
+      "price": 292.42,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GP35J9H5",
+      "tag": "OTHER"
+    },
+    {
+      "ts": 1792084551656,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0C533Q31X",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
+      "price": 64.45,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0C533Q31X",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792084551656,
+      "type": "price",
+      "from": 156.18,
+      "to": 158.66,
+      "store": "amazonjp",
+      "sku": "B0GMF1DTFB",
+      "name": "タカラトミー(TAKARA TOMY) CX-13 スターター バハムートブリッツBK1-50I",
+      "price": 158.66,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GMF1DTFB",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792084551656,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CV7HF3W6",
+      "name": "BEYBLADE X ベイブレードX UX-01 スターター ドランバスター 1-60A",
+      "price": 172.54,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CV7HF3W6",
+      "tag": "UX"
+    },
     {
       "ts": 1792083655332,
       "type": "new",
