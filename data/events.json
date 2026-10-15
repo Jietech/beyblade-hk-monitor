@@ -1,6 +1,50 @@
 {
-  "updatedAt": 1792102551313,
+  "updatedAt": 1792103447581,
   "events": [
+    {
+      "ts": 1792103447578,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B000069U3V",
+      "name": "次世代ベーゴマバトル ベイブレード",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B000069U3V",
+      "tag": "OTHER"
+    },
+    {
+      "ts": 1792103447578,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DWSRHP7J",
+      "name": "BEYBLADE X ベイブレードX CX-02 スターター ウィザードアーク R4-55LO",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DWSRHP7J",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792103447578,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CY4H1TJD",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
+      "price": 124.2,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CY4H1TJD",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792103447578,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CV7LP2M3",
+      "name": "BEYBLADE X ベイブレードX UX-04 バトルエントリーセットU",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CV7LP2M3",
+      "tag": "UX"
+    },
     {
       "ts": 1792102551310,
       "type": "new",
