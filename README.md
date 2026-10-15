@@ -26,8 +26,27 @@ Append an entry to the `STORES` array in `pollers/poll.mjs`:
 - Some sources (e.g. happinetonline.com) are Cloudflare + hotlink protected (403 to bots) —
   those are linked, not scraped.
 
+## Scheduling & the `workflow` scope blocker (2026-10-15)
+The intended design is `.github/workflows/poll.yml` (Actions cron). **But our GitHub PAT
+(`Jietech`, `repo, write:packages` only) cannot create/update files under `.github/workflows/`** —
+GitHub requires the `workflow` scope. API + git push both return:
+`refusing to allow a Personal Access Token to create or update workflow ... without workflow scope`.
+
+Workaround in use: **`run-and-push.sh` runs the poll locally via OpenClaw cron (`*/15 * * * *`)**
+and pushes the fresh `data/` snapshot to `main`. Pages then serves it. Same result.
+
+To switch to native Actions later either:
+- add `workflow` scope to the PAT (`gh auth refresh -s workflow`), then push `ci-templates/poll.yml` to `.github/workflows/poll.yml`; or
+- add the workflow file manually in the GitHub web UI (paste `ci-templates/poll.yml`), then delete the local cron job.
+
 ## Run locally
 ```bash
 node pollers/poll.mjs
+./run-and-push.sh          # poll + commit + push
 python3 -m http.server 8080   # open http://localhost:8080
 ```
+
+## Live
+- Dashboard: https://jietech.github.io/beyblade-hk-monitor/
+- Repo: https://github.com/Jietech/beyblade-hk-monitor
+
