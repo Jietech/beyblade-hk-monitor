@@ -1,6 +1,78 @@
 {
-  "updatedAt": 1792079150296,
+  "updatedAt": 1792080119211,
   "events": [
+    {
+      "ts": 1792080119209,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DHSD22WP",
+      "name": "ベイブレード セット",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DHSD22WP",
+      "tag": "OTHER"
+    },
+    {
+      "ts": 1792080119209,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0GP35J9H5",
+      "name": "ベイブレード X デラックスランチャー 2パック",
+      "price": 292.42,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GP35J9H5",
+      "tag": "OTHER"
+    },
+    {
+      "ts": 1792080119209,
+      "type": "price",
+      "from": 142.15,
+      "to": 158.66,
+      "store": "amazonjp",
+      "sku": "B0DWS7DDK4",
+      "name": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
+      "price": 158.66,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DWS7DDK4",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792080119209,
+      "type": "price",
+      "from": null,
+      "to": 109.08,
+      "store": "amazonjp",
+      "sku": "B0GMDYS21K",
+      "name": "タカラトミー(TAKARA TOMY) CX-14 スターター ナイトフォートレスGV8-70UN",
+      "price": 109.08,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GMDYS21K",
+      "tag": "CX"
+    },
+    {
+      "ts": 1792080119209,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0C533Q31X",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
+      "price": 64.45,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0C533Q31X",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792080119209,
+      "type": "price",
+      "from": null,
+      "to": 114.03,
+      "store": "amazonjp",
+      "sku": "B0HJ783F18",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-52 スターター ラスタードラグーン6-60LC",
+      "price": 114.03,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0HJ783F18",
+      "tag": "BX"
+    },
     {
       "ts": 1792079150292,
       "type": "new",
