@@ -64,7 +64,7 @@ export function modelTag(name = '') {
  * Generic Shopify storefront parser via the public `products.json` feed.
  * Works on any Shopify shop (tclub.com.hk, and most HK toy stores).
  */
-async function parseShopify(baseUrl) {
+async function parseShopify(storeId, baseUrl) {
   const items = [];
   for (let page = 1; page <= 4; page++) {
     let data;
@@ -83,6 +83,8 @@ async function parseShopify(baseUrl) {
         continue;
       // Exclude gift/promo-only SKUs that aren't real Beyblade products.
       if (/贈品|禮品|gift/i.test(name)) continue;
+      // Moonroad only sells a couple Bey items; keep the noise filter tight.
+      if (/pokemon|龍珠|gundam|高達|日本酒|扭蛋/i.test(name)) continue;
       const variants = p.variants || [];
       if (!variants.length) continue;
       const anyAvailable = variants.some((v) => v.available);
@@ -91,7 +93,7 @@ async function parseShopify(baseUrl) {
       if (v.price != null && Number(v.price) >= 900) continue;
       items.push(
         normalise({
-          store: 'tclub',
+          store: storeId,
           sku,
           name,
           price: v.price ?? null,
@@ -106,16 +108,63 @@ async function parseShopify(baseUrl) {
   return items;
 }
 
+/**
+ * Shopline storefront parser (toytoy.com.hk etc.) — HTML category/search page.
+ * Shopline renders `.Product-item` blocks with `.title` and `HK$x` prices.
+ */
+async function parseShopline(storeId, baseUrl, categoryPath) {
+  const items = [];
+  const html = await fetchText(`${baseUrl}${categoryPath}`);
+  for (const block of html.split(/(?=class="Product-item")/).slice(1)) {
+    const link = block.match(/href="(https:\/\/[^"]*\/products\/[^"]+)"/);
+    if (!link) continue;
+    const titleM = block.match(/<div class="title[^"]*">([^<]+)<\/div>/);
+    const name = titleM
+      ? titleM[1].replace(/&amp;/g, '&').replace(/\(.*?\)\s*/g, '').trim()
+      : '';
+    if (!/beyblade|爆旋|陀螺|\bBX[- ]?\d|\bUX[- ]?\d|\bCX[- ]?\d/i.test(name))
+      continue;
+    const priceM = block.match(/HK\$([\d,\.]+)/);
+    const soldout = /sold-out|售罄|Sold out|已售完|out-of-stock/i.test(block);
+    const slug = link[1].split('/products/')[1].split('?')[0];
+    items.push(
+      normalise({
+        store: storeId,
+        sku: slug,
+        name,
+        price: priceM ? priceM[1].replace(/,/g, '') : null,
+        status: soldout ? 'out' : 'in',
+        url: link[1],
+      }),
+    );
+  }
+  return items;
+}
+
 // ---------------------------------------------------------------------------
 // Store registry
 // ---------------------------------------------------------------------------
 const STORES = [
-  // Shopify storefront: tclub.com.hk (HK Beyblade retailer)
+  // Shopify storefront: tclub.com.hk (HK Beyblade specialist)
   {
     id: 'tclub',
     name: 'TClub HK',
     platform: 'shopify',
-    run: () => parseShopify('https://www.tclub.com.hk'),
+    run: () => parseShopify('tclub', 'https://www.tclub.com.hk'),
+  },
+  // Shopline storefront: toytoy.com.hk (HK toy shop)
+  {
+    id: 'toytoy',
+    name: 'ToyToy HK',
+    platform: 'shopline',
+    run: () => parseShopline('toytoy', 'https://www.toytoy.com.hk', '/categories/beyblade-x'),
+  },
+  // Shopify storefront: moonroadhk.com (HK collectibles)
+  {
+    id: 'moonroad',
+    name: 'Moonroad HK',
+    platform: 'shopify',
+    run: () => parseShopify('moonroad', 'https://moonroadhk.com'),
   },
 ];
 

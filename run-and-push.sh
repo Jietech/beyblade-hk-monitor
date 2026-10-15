@@ -14,6 +14,8 @@ cd "$REPO_DIR"
 {
   echo "=== $(date '+%Y-%m-%d %H:%M:%S %Z') ==="
   node pollers/poll.mjs
+  # Notify layer (no-op if BEY_TG_TOKEN unset).
+  BEY_TG_CHAT="${BEY_TG_CHAT:-6467508991}" node pollers/notify.mjs || true
   git add data/
   if git diff --cached --quiet; then
     echo "no data change"

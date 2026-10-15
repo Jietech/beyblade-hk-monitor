@@ -9,6 +9,16 @@ poll → snapshot → diff → alert pattern.
   items to `{store, sku, name, price, status, url}`, and diffs vs `data/state.json`.
 - Changes (`restock` / `oos` / `new` / `price`) are appended to `data/events.json`.
 - `index.html` is a static dashboard (GitHub Pages) reading those JSON files.
+- `pollers/notify.mjs` pushes actionable events (restock / new-in-stock) to Telegram.
+
+### Stores monitored (2026-10-15)
+| id | name | platform | method |
+|---|---|---|---|
+| `tclub` | TClub HK | Shopify | `products.json` |
+| `toytoy` | ToyToy HK | Shopline | HTML `/categories/beyblade-x` |
+| `moonroad` | Moonroad HK | Shopify | `products.json` |
+
+Blocked/unsuitable sources: happinetonline.com (CloudFront + hotlink 403), theclub.com.hk (Magento, no public feed), animespro / hobbyland / maytoys / battleground (unreachable from here).
 
 ## Add a store
 Append an entry to the `STORES` array in `pollers/poll.mjs`:

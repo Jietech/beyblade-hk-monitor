@@ -1,13 +1,27 @@
 {
-  "updatedAt": 1792040932267,
-  "count": 53,
+  "updatedAt": 1792041242688,
+  "count": 75,
   "stores": [
     {
       "id": "tclub",
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5626
+      "ms": 5646
+    },
+    {
+      "id": "toytoy",
+      "name": "ToyToy HK",
+      "ok": true,
+      "count": 13,
+      "ms": 433
+    },
+    {
+      "id": "moonroad",
+      "name": "Moonroad HK",
+      "ok": true,
+      "count": 9,
+      "ms": 1642
     }
   ],
   "items": {
@@ -434,6 +448,182 @@
       "price": 39.9,
       "status": "out",
       "url": "https://www.tclub.com.hk/products/現貨-tomica-bx022-gr-supra-gt4-evo"
+    },
+    "toytoy:takara-tomy-beyblade-x-bx-53-deluxe-battle-entry-set": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-bx-53-deluxe-battle-entry-set",
+      "name": "Takara Tomy 爆旋陀螺X - BX-53 豪華對戰入門套裝",
+      "price": 799,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-bx-53-deluxe-battle-entry-set"
+    },
+    "toytoy:takara-tomy-beyblade-x-bx-52-starter-luster-dragoon-6-60lc": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-bx-52-starter-luster-dragoon-6-60lc",
+      "name": "Takara Tomy 爆旋陀螺X - BX-52 輝耀青龍 6-60LC & BX-56 發射器 L",
+      "price": 399,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-bx-52-starter-luster-dragoon-6-60lc"
+    },
+    "toytoy:takara-tomy-beyblade-x-cx-00-bxg-70-tiga-rage-ft3-60t": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-cx-00-bxg-70-tiga-rage-ft3-60t",
+      "name": "Takara Tomy 爆旋陀螺X - CX-00 BXG-70 迪加狂怒",
+      "price": 399,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-cx-00-bxg-70-tiga-rage-ft3-60t"
+    },
+    "toytoy:takara-tomy-beyblade-x-cx-19-random-booster-croco-tread-tq-5-50gn": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-cx-19-random-booster-croco-tread-tq-5-50gn",
+      "name": "Takara Tomy 爆旋陀螺X - CX-19 隨機強化陀螺 鱷魚戰紋 TQ 5-50GN",
+      "price": 150,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-cx-19-random-booster-croco-tread-tq-5-50gn"
+    },
+    "toytoy:takara-tomy-beyblade-x-eva-store-exclusive-cx-00-evangelion-deck-set": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-eva-store-exclusive-cx-00-evangelion-deck-set",
+      "name": "Takara Tomy 爆旋陀螺X - EVA Store 限定 CX-00 Evangelion Deck 三陀螺套裝",
+      "price": 499,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-eva-store-exclusive-cx-00-evangelion-deck-set"
+    },
+    "toytoy:takara-tomy-beyblade-x-ux-21-hellsnether-deck-set": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-ux-21-hellsnether-deck-set",
+      "name": "Takara Tomy 爆旋陀螺X - UX-21 惡魔幽冥改造組",
+      "price": 360,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-ux-21-hellsnether-deck-set"
+    },
+    "toytoy:takara-tomy-beyblade-x-bx-50-random-booster-vol11-random-1pc": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-bx-50-random-booster-vol11-random-1pc",
+      "name": "Takara Tomy 爆旋陀螺X - BX-50 隨機陀螺 Vol.11",
+      "price": 150,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-bx-50-random-booster-vol11-random-1pc"
+    },
+    "toytoy:takara-tomy-beyblade-x-ux-20-starter-glory-valkyrie-lf": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-ux-20-starter-glory-valkyrie-lf",
+      "name": "Takara Tomy 爆旋陀螺X - UX-20 榮耀女武神",
+      "price": 300,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-ux-20-starter-glory-valkyrie-lf"
+    },
+    "toytoy:takara-tomy-beyblade-x-bx-00-aeropegasus-3-70a": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-bx-00-aeropegasus-3-70a",
+      "name": "Takara Tomy 爆旋陀螺X - BX-00 烈風天馬3-70A",
+      "price": 200,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-bx-00-aeropegasus-3-70a"
+    },
+    "toytoy:takara-tomy-beyblade-x-ux-04-battle-entry-set": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-ux-04-battle-entry-set",
+      "name": "Takara Tomy 爆旋陀螺X - UX-04 對戰入門套裝",
+      "price": 499,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-ux-04-battle-entry-set"
+    },
+    "toytoy:takara-tomy-beyblade-x-ux-03-wizard-rod-5-70db": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-ux-03-wizard-rod-5-70db",
+      "name": "Takara Tomy 爆旋陀螺X - UX-03 魔導神杖 5-70DB",
+      "price": 180,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-ux-03-wizard-rod-5-70db"
+    },
+    "toytoy:takara-tomy-beyblade-x-cx-16-battle-entry-set-c": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-cx-16-battle-entry-set-c",
+      "name": "Takara Tomy 爆旋陀螺X - CX-16 啟動衝刺套裝C",
+      "price": 380,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-cx-16-battle-entry-set-c"
+    },
+    "toytoy:takara-tomy-beyblade-x-cx-11-deck-set-emperor-might-hop-golem-rock-m-85hn-shark-gill-5-60fb": {
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-cx-11-deck-set-emperor-might-hop-golem-rock-m-85hn-shark-gill-5-60fb",
+      "name": "Takara Tomy 爆旋陀螺X - CX-11 甲板套裝",
+      "price": 450,
+      "status": "in",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-cx-11-deck-set-emperor-might-hop-golem-rock-m-85hn-shark-gill-5-60fb"
+    },
+    "moonroad:4904810098775-HKPO": {
+      "store": "moonroad",
+      "sku": "4904810098775-HKPO",
+      "name": "Takara Tomy 爆旋陀螺X - CX-11 甲板套裝 (帝皇霸權 HOp, 魔像巨石 M-85HN, 烈鯊鰓刃 5-60FB)",
+      "price": 260,
+      "status": "out",
+      "url": "https://moonroadhk.com/products/takara-tomy-爆旋陀螺x-cx-11-甲板套裝-帝皇霸權-hop-魔像巨石-m-85hn-烈鯊鰓刃-5-60fb"
+    },
+    "moonroad:戰鬥陀螺-bbx-beybladex-evangelion-deck-set-pre-order": {
+      "store": "moonroad",
+      "sku": "戰鬥陀螺-bbx-beybladex-evangelion-deck-set-pre-order",
+      "name": "戰鬥陀螺 BBX-BeybladeX Evangelion Deck Set",
+      "price": 350,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/戰鬥陀螺-bbx-beybladex-evangelion-deck-set-pre-order"
+    },
+    "moonroad:4904810097280": {
+      "store": "moonroad",
+      "sku": "4904810097280",
+      "name": "Takara Tomy 爆旋陀螺X - CX-16 啟動衝刺套裝C (附發射器)【港版】",
+      "price": 280,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-cx-16-啟動衝刺套裝c-附發射器-港版-預計-9-10月貨"
+    },
+    "moonroad:4904810910596": {
+      "store": "moonroad",
+      "sku": "4904810910596",
+      "name": "Takara Tomy 爆旋陀螺X - BX-10 極限陀螺盤套裝【港版】",
+      "price": 180,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-bx-10-極限陀螺盤套裝-港版-7月貨"
+    },
+    "moonroad:4904810914495": {
+      "store": "moonroad",
+      "sku": "4904810914495",
+      "name": "Takara Tomy BEYBLADE X UX-03 魔導神杖 5-70DB（港版）",
+      "price": 120,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-ux-03-魔導神杖-5-70db-港版"
+    },
+    "moonroad:pre-order-takara-tomy-x-bx-23-9-60gf": {
+      "store": "moonroad",
+      "sku": "pre-order-takara-tomy-x-bx-23-9-60gf",
+      "name": "Takara Tomy 爆旋陀螺X - BX-23 鳳凰飛翼9-60GF【港版】",
+      "price": 150,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-x-bx-23-9-60gf"
+    },
+    "moonroad:4904810913320": {
+      "store": "moonroad",
+      "sku": "4904810913320",
+      "name": "Takara Tomy 爆旋陀螺X - BX-25 陀螺及配件收納箱【港版】",
+      "price": 150,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-bx-25-陀螺及配件收納箱-港版-7月貨"
+    },
+    "moonroad:4904810096122": {
+      "store": "moonroad",
+      "sku": "4904810096122",
+      "name": "Takara Tomy 爆旋陀螺X - BX-49 蒼龍突擊(附發射器) 4-50FF【港版",
+      "price": 100,
+      "status": "in",
+      "url": "https://moonroadhk.com/products/takara-tomy-爆旋陀螺x-bx-45-武士聖劍-b6-70m-副本"
+    },
+    "moonroad:pre-order-takara-tomy-爆旋陀螺x-bx-48-隨機陀螺-vol-9-隨機1款-港版": {
+      "store": "moonroad",
+      "sku": "pre-order-takara-tomy-爆旋陀螺x-bx-48-隨機陀螺-vol-9-隨機1款-港版",
+      "name": "Takara Tomy 爆旋陀螺X - BX-48 隨機陀螺 Vol.9 (隨機1款)【港版】",
+      "price": 95,
+      "status": "out",
+      "url": "https://moonroadhk.com/products/pre-order-takara-tomy-爆旋陀螺x-bx-48-隨機陀螺-vol-9-隨機1款-港版"
     }
   }
 }
