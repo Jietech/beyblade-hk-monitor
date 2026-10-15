@@ -9,6 +9,10 @@
  * Output: data/state.json, data/events.json
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+
+const execFileP = promisify(execFile);
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -141,6 +145,119 @@ async function parseShopline(storeId, baseUrl, categoryPath) {
   return items;
 }
 
+/**
+ * Amazon.co.jp search-results parser.
+ * Plain HTML fetch works with a normal desktop UA + ja-JP Accept-Language.
+ * Each result is a <div data-asin=...> block; we read the ASIN, the <h2> title
+ * and the price (HKD/JPY depending on geo). Availability: presence in results
+ * = in stock; "在庫切れ" / "Currently unavailable" marks out of stock.
+ */
+async function parseAmazonJP(storeId, searchTerm) {
+  const url = `https://www.amazon.co.jp/s?k=${encodeURIComponent(searchTerm)}`;
+  // NOTE: Amazon blocks Node/undici's TLS fingerprint, so shell out to curl
+  // (same approach that works interactively). curl is present on GH runners.
+  let html;
+  try {
+    const { stdout } = await execFileP(
+      'curl',
+      [
+        '-sL',
+        '--max-time', '30',
+        '-A', UA,
+        '-H', 'Accept-Language: ja-JP,ja;q=0.9,en;q=0.8',
+        '-H', 'Accept: text/html,application/xhtml+xml,*/*;q=0.8',
+        url,
+      ],
+      { maxBuffer: 20 * 1024 * 1024 },
+    );
+    html = stdout;
+  } catch (err) {
+    throw new Error(`curl failed: ${err.message}`);
+  }
+  if (!html || html.length < 5000)
+    throw new Error(`Amazon short/empty response (${html.length} bytes)`);
+  if (/captcha|automated access|api-services-support/i.test(html.slice(0, 4000)))
+    throw new Error('Amazon bot-check page');
+
+  const items = [];
+  const blocks = html.split(/(?=<div[^>]*data-asin="[A-Z0-9]{10}")/).slice(1);
+  const seen = new Set();
+  for (const b of blocks) {
+    const asin = (b.match(/data-asin="([A-Z0-9]{10})"/) || [])[1];
+    if (!asin || seen.has(asin)) continue;
+    const titleM = b.match(/<h2[^>]*>[\s\S]*?<span[^>]*>([^<]{5,200})<\/span>/);
+    const title = titleM ? titleM[1].replace(/&amp;/g, '&').trim() : '';
+    if (!/beyblade|ベイブレード|\bBX[- ]?\d|\bUX[- ]?\d|\bCX[- ]?\d/i.test(title))
+      continue;
+    if (/カートに入れる|Buy Now/.test(title)) continue;
+    const priceM = b.match(/a-offscreen">(?:HKD|JPY|￥)?\s*([\d,\.]+)/);
+    const oos = /在庫切れ|一時的に在庫切れ|Currently unavailable|Out of Stock/i.test(b);
+    seen.add(asin);
+    items.push(
+      normalise({
+        store: storeId,
+        sku: asin,
+        name: title,
+        price: priceM ? priceM[1].replace(/,/g, '') : null,
+        status: oos ? 'out' : 'in',
+        url: `https://www.amazon.co.jp/dp/${asin}`,
+      }),
+    );
+  }
+  return items;
+}
+
+/**
+ * ToysRUs Hong Kong (Salesforce Commerce Cloud) category parser.
+ * The category grid is served by the Demandware `Search-ShowAjax` endpoint,
+ * which returns product tiles carrying a `data-metadata` JSON blob with
+ * id / name / price / sku / quantity. Presence = listed; sold-out tiles carry
+ * a sold-out class/text. Politeness: 1 request per category per run.
+ */
+async function parseToysRUs(storeId, cgid) {
+  const url =
+    `https://www.toysrus.com.hk/on/demandware.store/Sites-ToysRUs_HK-Site/en_HK/Search-ShowAjax` +
+    `?cgid=${encodeURIComponent(cgid)}&sz=200`;
+  const res = await fetch(url, {
+    headers: {
+      'User-Agent': UA,
+      'Accept-Language': 'zh-HK,zh;q=0.9,en;q=0.8',
+      'X-Requested-With': 'XMLHttpRequest',
+      Accept: 'text/html,*/*;q=0.8',
+    },
+    redirect: 'follow',
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+  const html = await res.text();
+
+  const items = [];
+  const metas = html.match(/data-metadata='([^']+)'/g) || [];
+  for (const raw of metas) {
+    let m;
+    try {
+      m = JSON.parse(raw.slice("data-metadata='".length, -1));
+    } catch {
+      continue;
+    }
+    const name = m.name || m.name_local || '';
+    if (!/beyblade|爆旋|陀螺|\bBX[- ]?\d|\bUX[- ]?\d|\bCX[- ]?\d/i.test(name))
+      continue;
+    const pid = String(m.sku || m.id || '');
+    if (!pid) continue;
+    items.push(
+      normalise({
+        store: storeId,
+        sku: pid,
+        name,
+        price: m.price != null ? m.price : null,
+        status: 'in',
+        url: `https://www.toysrus.com.hk/en-hk/p/${pid}.html`,
+      }),
+    );
+  }
+  return items;
+}
+
 // ---------------------------------------------------------------------------
 // Store registry
 // ---------------------------------------------------------------------------
@@ -165,6 +282,20 @@ const STORES = [
     name: 'Moonroad HK',
     platform: 'shopify',
     run: () => parseShopify('moonroad', 'https://moonroadhk.com'),
+  },
+  // Amazon Japan search (Takara Tomy official Beyblade X listings ship from JP)
+  {
+    id: 'amazonjp',
+    name: 'Amazon JP',
+    platform: 'amazon',
+    run: () => parseAmazonJP('amazonjp', 'ベイブレードX'),
+  },
+  // ToysRUs Hong Kong (SFCC) — Spinning & Battle Tops category
+  {
+    id: 'toysrus',
+    name: 'ToysRUs HK',
+    platform: 'sfcc',
+    run: () => parseToysRUs('toysrus', 'spinning_battle_tops_hk'),
   },
 ];
 

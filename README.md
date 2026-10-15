@@ -17,6 +17,16 @@ poll → snapshot → diff → alert pattern.
 | `tclub` | TClub HK | Shopify | `products.json` |
 | `toytoy` | ToyToy HK | Shopline | HTML `/categories/beyblade-x` |
 | `moonroad` | Moonroad HK | Shopify | `products.json` |
+| `amazonjp` | Amazon JP | Amazon | search HTML via `curl` (Node fetch is TLS-blocked) |
+| `toysrus` | ToysRUs HK | Salesforce CC | `Search-ShowAjax?cgid=spinning_battle_tops_hk` (`data-metadata`) |
+
+Notes on the two new sources:
+- **Amazon JP**: Node's built-in `fetch` is blocked by Amazon (short/bot-check response);
+  the parser shells out to `curl` which works. Prices are returned in HKD for our geo.
+  Presence in search results = in stock; `在庫切れ` / `Currently unavailable` = out.
+- **ToysRUs HK**: SFCC storefront; the `Spinning & Battle Tops` category is currently
+  **empty (0 products)** — the parser will correctly show 0 and fire `new` events once
+  Takara Tomy stock appears. Grid tiles carry a `data-metadata` JSON blob (id/name/price/sku).
 
 Blocked/unsuitable sources: happinetonline.com (CloudFront + hotlink 403), theclub.com.hk (Magento, no public feed), animespro / hobbyland / maytoys / battleground (unreachable from here).
 
