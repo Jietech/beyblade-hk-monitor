@@ -1,6 +1,17 @@
 {
-  "updatedAt": 1792081851752,
+  "updatedAt": 1792082751224,
   "events": [
+    {
+      "ts": 1792082751221,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0GWKWBXH3",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-17 ランダムブースター Vol.10",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GWKWBXH3",
+      "tag": "CX"
+    },
     {
       "ts": 1792081851750,
       "type": "new",
