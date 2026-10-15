@@ -1,6 +1,41 @@
 {
-  "updatedAt": 1792082751224,
+  "updatedAt": 1792083655335,
   "events": [
+    {
+      "ts": 1792083655332,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0CY4H1TJD",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
+      "price": 123.95,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0CY4H1TJD",
+      "tag": "BX"
+    },
+    {
+      "ts": 1792083655332,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0H29KKBCY",
+      "name": "Hasbro ベイブレード X バロー バイソン FB UX インフィニティ スターターパック セット タカラトミー スピニングトップ (耐久タイプ) & スターター バトルスピナーゲーム おもちゃ 8歳から",
+      "price": 367.34,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0H29KKBCY",
+      "tag": "UX"
+    },
+    {
+      "ts": 1792083655332,
+      "type": "price",
+      "from": null,
+      "to": 109.08,
+      "store": "amazonjp",
+      "sku": "B0GMDYS21K",
+      "name": "タカラトミー(TAKARA TOMY) CX-14 スターター ナイトフォートレスGV8-70UN",
+      "price": 109.08,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GMDYS21K",
+      "tag": "CX"
+    },
     {
       "ts": 1792082751221,
       "type": "new",
