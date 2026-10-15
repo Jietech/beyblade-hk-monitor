@@ -1,6 +1,17 @@
 {
-  "updatedAt": 1792090956623,
+  "updatedAt": 1792091749098,
   "events": [
+    {
+      "ts": 1792091749096,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0DWSRHP7J",
+      "name": "BEYBLADE X ベイブレードX CX-02 スターター ウィザードアーク R4-55LO",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0DWSRHP7J",
+      "tag": "CX"
+    },
     {
       "ts": 1792090956621,
       "type": "new",

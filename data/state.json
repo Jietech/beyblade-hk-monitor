@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1792090956621,
+  "updatedAt": 1792091749097,
   "count": 120,
   "stores": [
     {
@@ -7,35 +7,35 @@
       "name": "TClub HK",
       "ok": true,
       "count": 53,
-      "ms": 5525
+      "ms": 5548
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 13,
-      "ms": 484
+      "ms": 410
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 9,
-      "ms": 2522
+      "ms": 433
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
       "count": 45,
-      "ms": 1606
+      "ms": 1435
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": 203
+      "ms": 183
     }
   ],
   "items": {
@@ -655,14 +655,6 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0FNM2MZDB"
     },
-    "amazonjp:B0GG8QM8YS": {
-      "store": "amazonjp",
-      "sku": "B0GG8QM8YS",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-48 ランダムブースターVol.9",
-      "price": 162.62,
-      "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0GG8QM8YS"
-    },
     "amazonjp:B0GMF1DTFB": {
       "store": "amazonjp",
       "sku": "B0GMF1DTFB",
@@ -670,6 +662,14 @@
       "price": 155.68,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GMF1DTFB"
+    },
+    "amazonjp:B0GG8QM8YS": {
+      "store": "amazonjp",
+      "sku": "B0GG8QM8YS",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-48 ランダムブースターVol.9",
+      "price": 162.62,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0GG8QM8YS"
     },
     "amazonjp:B0C52YJQBC": {
       "store": "amazonjp",
@@ -711,13 +711,13 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GMFHY6ZV"
     },
-    "amazonjp:B0H4PPV8MR": {
+    "amazonjp:B0C533Q31X": {
       "store": "amazonjp",
-      "sku": "B0H4PPV8MR",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-20 スターター グローリーワルキューレ LF",
-      "price": null,
+      "sku": "B0C533Q31X",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
+      "price": 64.45,
       "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0H4PPV8MR"
+      "url": "https://www.amazon.co.jp/dp/B0C533Q31X"
     },
     "amazonjp:B0GP22FMHL": {
       "store": "amazonjp",
@@ -727,13 +727,13 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0GP22FMHL"
     },
-    "amazonjp:B0C533Q31X": {
+    "amazonjp:B0H4PPV8MR": {
       "store": "amazonjp",
-      "sku": "B0C533Q31X",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
-      "price": 64.45,
+      "sku": "B0H4PPV8MR",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-20 スターター グローリーワルキューレ LF",
+      "price": null,
       "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0C533Q31X"
+      "url": "https://www.amazon.co.jp/dp/B0H4PPV8MR"
     },
     "amazonjp:B0GS4F6977": {
       "store": "amazonjp",
@@ -991,13 +991,13 @@
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0CMZSRJ3Q"
     },
-    "amazonjp:B0CY4H1TJD": {
+    "amazonjp:B0DWSRHP7J": {
       "store": "amazonjp",
-      "sku": "B0CY4H1TJD",
-      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
-      "price": 123.95,
+      "sku": "B0DWSRHP7J",
+      "name": "BEYBLADE X ベイブレードX CX-02 スターター ウィザードアーク R4-55LO",
+      "price": null,
       "status": "in",
-      "url": "https://www.amazon.co.jp/dp/B0CY4H1TJD"
+      "url": "https://www.amazon.co.jp/dp/B0DWSRHP7J"
     }
   }
 }
