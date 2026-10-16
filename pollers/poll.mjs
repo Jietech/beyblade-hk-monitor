@@ -32,11 +32,11 @@ const HEADERS = {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // ---------------------------------------------------------------------------
-// Focus filter — Ivan (2026-10-16): only track the BX-53 All-in-One set.
-// Matches "BX-53", "BX53", "BX 53" (case-insensitive) anywhere in the name.
-// Set to null to track every Beyblade product again.
+// Focus filter — Ivan (2026-10-16): track the BX-53 All-in-One set + CX-20 改造套裝C.
+// Matches "BX-53"/"BX53"/"BX 53" OR "CX-20"/"CX20"/"CX 20" (case-insensitive)
+// anywhere in the name. Set to null to track every Beyblade product again.
 // ---------------------------------------------------------------------------
-export const TARGET_FILTER = /\bBX[-\s]?53\b/i;
+export const TARGET_FILTER = /\bBX[-\s]?53\b|\bCX[-\s]?20\b/i;
 const matchesTarget = (name = '') =>
   !TARGET_FILTER || TARGET_FILTER.test(String(name));
 
@@ -280,6 +280,67 @@ async function parseToysRUs(storeId, cgid) {
   return items;
 }
 
+/**
+ * Direct product-page watcher (JSON-LD).
+ * Robust for specific listings where the category feed is unreliable, e.g.
+ * ToysRUs HK pre-orders. Reads schema.org Product JSON-LD for name/price/sku
+ * and the `availability` field to derive in-stock vs out-of-stock.
+ * Set-up: add { store, url } entries to WATCHLIST.
+ */
+async function parseDirectProduct(storeId, url) {
+  const res = await fetch(url, {
+    headers: { 'User-Agent': UA, 'Accept-Language': 'zh-HK,zh;q=0.9,en;q=0.8' },
+    redirect: 'follow',
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+  const html = await res.text();
+  const blocks = html.match(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi) || [];
+  for (const block of blocks) {
+    const json = block.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '').trim();
+    let data;
+    try {
+      data = JSON.parse(json);
+    } catch {
+      continue;
+    }
+    const nodes = Array.isArray(data) ? data : [data];
+    for (const node of nodes) {
+      if (!node || String(node['@type']).toLowerCase() !== 'product') continue;
+      const offers = Array.isArray(node.offers) ? node.offers[0] : node.offers || {};
+      const avail = String(offers.availability || '').toLowerCase();
+      const name = String(node.name || '').replace(/\s+/g, ' ').trim();
+      if (!name) continue;
+      const sku = String(node.sku || offers.sku || url).trim();
+      const price = offers.price != null ? Number(offers.price) : null;
+      const status = avail.includes('instock') ? 'in' : 'out';
+      return [
+        normalise({ store: storeId, sku, name, price, status, url }),
+      ];
+    }
+  }
+  throw new Error(`no JSON-LD product found at ${url}`);
+}
+
+// ---------------------------------------------------------------------------
+// Direct product watchlist — specific listings worth tracking by exact URL.
+// (Ivan 2026-10-16): ToysRUs HK CX-20 改造套裝C pre-order.
+// ---------------------------------------------------------------------------
+const WATCHLIST = [
+  {
+    store: 'toysrus',
+    url: 'https://www.toysrus.com.hk/zh-hk/10173908.html', // CX-20 改造套裝C (pre-order)
+  },
+];
+
+function watchlistStore(entry) {
+  return {
+    id: `${entry.store}-watch`,
+    name: `Watchlist (${entry.store})`,
+    platform: 'jsonld',
+    run: () => parseDirectProduct(entry.store, entry.url),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Store registry
 // ---------------------------------------------------------------------------
@@ -319,6 +380,8 @@ const STORES = [
     platform: 'sfcc',
     run: () => parseToysRUs('toysrus', 'spinning_battle_tops_hk'),
   },
+  // Direct product-page watchers (robust for specific listings / pre-orders)
+  ...WATCHLIST.map(watchlistStore),
 ];
 
 // ---------------------------------------------------------------------------

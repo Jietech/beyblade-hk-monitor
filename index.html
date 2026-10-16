@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Beyblade BX-53 到貨監測</title>
+<title>Beyblade BX-53 + CX-20 到貨監測</title>
 <style>
   :root{
     --bg:#0d1117;--panel:#161b22;--border:#30363d;--fg:#e6edf3;--dim:#8b949e;
@@ -39,8 +39,8 @@
 </head>
 <body>
 <header>
-  <h1>🌀 Beyblade BX-53 到貨監測</h1>
-  <div class="sub">只追蹤 Takara Tomy 爆旋陀螺X <b>BX-53 豪華對戰入門套裝</b> · 5 間網店 · 每 15 分鐘更新 · <span id="updated">載入中…</span></div>
+  <h1>🌀 Beyblade BX-53 + CX-20 到貨監測</h1>
+  <div class="sub">追蹤 Takara Tomy 爆旋陀螺X <b>BX-53 豪華對戰入門套裝</b> + <b>CX-20 改造套裝C</b> · 5 間網店 · 每 15 分鐘更新 · <span id="updated">載入中…</span></div>
 </header>
 
 <div class="wrap">
@@ -71,9 +71,9 @@
 const $ = (s) => document.querySelector(s);
 let ITEMS = [];
 
-// Focus filter — only the BX-53 All-in-One set (Ivan, 2026-10-16).
+// Focus filter — track the BX-53 All-in-One set + CX-20 改造套裝C (Ivan, 2026-10-16).
 // Set to null to show every Beyblade product again.
-const TARGET_FILTER = /\bBX[-\s]?53\b/i;
+const TARGET_FILTER = /\bBX[-\s]?53\b|\bCX[-\s]?20\b/i;
 const isTarget = (name) => !TARGET_FILTER || TARGET_FILTER.test(name || '');
 
 function tagOf(name){

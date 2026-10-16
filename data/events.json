@@ -1,6 +1,17 @@
 {
-  "updatedAt": 1792133150768,
+  "updatedAt": 1792133198586,
   "events": [
+    {
+      "ts": 1792133198585,
+      "type": "new",
+      "store": "toysrus",
+      "sku": "199438",
+      "name": "(網店預購) Beyblade爆旋陀螺X CX-20 改造套裝C (預計2026年11月發貨)",
+      "price": 419.9,
+      "status": "out",
+      "url": "https://www.toysrus.com.hk/zh-hk/10173908.html",
+      "tag": "CX"
+    },
     {
       "ts": 1792131349820,
       "type": "price",
