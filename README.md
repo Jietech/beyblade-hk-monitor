@@ -4,6 +4,10 @@ Real-time-ish stock monitor for HK Beyblade storefronts, running entirely on Git
 (Actions = poller, Pages = front-end). Inspired by hkbeybladex.com's
 poll → snapshot → diff → alert pattern.
 
+> **🎯 Focus (2026-10-16, Ivan): tracks the BX-53 All-in-One set only.**
+> Both `poll.mjs` and `index.html` apply `TARGET_FILTER = /\bBX[-\s]?53\b/i`.
+> Set `TARGET_FILTER = null` in either file to monitor every Beyblade product again.
+
 ## How it works
 - `pollers/poll.mjs` fetches each store every 15 min (GitHub Actions cron), normalises
   items to `{store, sku, name, price, status, url}`, and diffs vs `data/state.json`.
@@ -22,7 +26,9 @@ poll → snapshot → diff → alert pattern.
 
 Notes on the two new sources:
 - **Amazon JP**: Node's built-in `fetch` is blocked by Amazon (short/bot-check response);
-  the parser shells out to `curl` which works. Prices are returned in HKD for our geo.
+  the parser shells out to `curl` **with a persistent cookie jar** (`data/.amazon-cookies.txt`,
+  git-ignored) + `--compressed`. Without a cookie jar Amazon returns a ~1.5KB `bm-verify`
+  interstitial instead of results. Prices are returned in HKD for our geo.
   Presence in search results = in stock; `在庫切れ` / `Currently unavailable` = out.
 - **ToysRUs HK**: SFCC storefront; the `Spinning & Battle Tops` category is currently
   **empty (0 products)** — the parser will correctly show 0 and fire `new` events once

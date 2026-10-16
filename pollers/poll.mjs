@@ -31,6 +31,15 @@ const HEADERS = {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// ---------------------------------------------------------------------------
+// Focus filter — Ivan (2026-10-16): only track the BX-53 All-in-One set.
+// Matches "BX-53", "BX53", "BX 53" (case-insensitive) anywhere in the name.
+// Set to null to track every Beyblade product again.
+// ---------------------------------------------------------------------------
+export const TARGET_FILTER = /\bBX[-\s]?53\b/i;
+const matchesTarget = (name = '') =>
+  !TARGET_FILTER || TARGET_FILTER.test(String(name));
+
 async function fetchText(url, { json = false } = {}) {
   const res = await fetch(url, { headers: HEADERS, redirect: 'follow' });
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
@@ -43,6 +52,7 @@ function normalise({ store, sku, name, price, status, url }) {
     store,
     sku: String(sku),
     name: String(name || '').replace(/\s+/g, ' ').trim().slice(0, 160),
+    // Focus filter is applied centrally in main() — keep parsers generic.
     price: price == null ? null : Number(price),
     status: status === 'in' ? 'in' : 'out',
     url,
@@ -156,27 +166,39 @@ async function parseAmazonJP(storeId, searchTerm) {
   const url = `https://www.amazon.co.jp/s?k=${encodeURIComponent(searchTerm)}`;
   // NOTE: Amazon blocks Node/undici's TLS fingerprint, so shell out to curl
   // (same approach that works interactively). curl is present on GH runners.
-  let html;
-  try {
-    const { stdout } = await execFileP(
-      'curl',
-      [
-        '-sL',
-        '--max-time', '30',
-        '-A', UA,
-        '-H', 'Accept-Language: ja-JP,ja;q=0.9,en;q=0.8',
-        '-H', 'Accept: text/html,application/xhtml+xml,*/*;q=0.8',
-        url,
-      ],
-      { maxBuffer: 20 * 1024 * 1024 },
-    );
-    html = stdout;
-  } catch (err) {
-    throw new Error(`curl failed: ${err.message}`);
+  // Persistent cookie jar is REQUIRED: without cookies Amazon returns a
+  // ~1.5KB bm-verify/bot interstitial instead of the results page. With a
+  // jar, the first request usually passes cleanly. --compressed so we get
+  // real HTML (not gzip bytes) when curl doesn't auto-decode.
+  const jar = join(DATA, '.amazon-cookies.txt');
+  const curlArgs = [
+    '-sL',
+    '--compressed',
+    '--max-time', '30',
+    '-c', jar,
+    '-b', jar,
+    '-A', UA,
+    '-H', 'Accept-Language: ja-JP,ja;q=0.9,en;q=0.8',
+    '-H', 'Accept: text/html,application/xhtml+xml,*/*;q=0.8',
+  ];
+  let html = '';
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const { stdout } = await execFileP('curl', [...curlArgs, url], {
+        maxBuffer: 20 * 1024 * 1024,
+      });
+      html = stdout;
+    } catch (err) {
+      throw new Error(`curl failed: ${err.message}`);
+    }
+    // Detect the bm-verify interstitial (meta refresh + pow script).
+    const isChallenge = /bm-verify/.test(html) && html.length < 60000;
+    if (!isChallenge) break;
+    await sleep(2000 + attempt * 1500);
   }
   if (!html || html.length < 5000)
     throw new Error(`Amazon short/empty response (${html.length} bytes)`);
-  if (/captcha|automated access|api-services-support/i.test(html.slice(0, 4000)))
+  if (/bm-verify|captcha|automated access|api-services-support/i.test(html.slice(0, 4000)))
     throw new Error('Amazon bot-check page');
 
   const items = [];
@@ -351,7 +373,7 @@ async function main() {
   for (const store of STORES) {
     const started = Date.now();
     try {
-      const items = await store.run();
+      const items = (await store.run()).filter((it) => matchesTarget(it.name));
       for (const it of items) snapshot[`${it.store}:${it.sku}`] = it;
       storeMeta.push({
         id: store.id,

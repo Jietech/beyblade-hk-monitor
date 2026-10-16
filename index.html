@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Beyblade HK 到貨監測</title>
+<title>Beyblade BX-53 到貨監測</title>
 <style>
   :root{
     --bg:#0d1117;--panel:#161b22;--border:#30363d;--fg:#e6edf3;--dim:#8b949e;
@@ -39,8 +39,8 @@
 </head>
 <body>
 <header>
-  <h1>🌀 Beyblade HK 到貨監測</h1>
-  <div class="sub">實時追蹤香港網店到貨／售罄狀態 · 資料每 15 分鐘更新 · <span id="updated">載入中…</span></div>
+  <h1>🌀 Beyblade BX-53 到貨監測</h1>
+  <div class="sub">只追蹤 Takara Tomy 爆旋陀螺X <b>BX-53 豪華對戰入門套裝</b> · 5 間網店 · 每 15 分鐘更新 · <span id="updated">載入中…</span></div>
 </header>
 
 <div class="wrap">
@@ -71,6 +71,11 @@
 const $ = (s) => document.querySelector(s);
 let ITEMS = [];
 
+// Focus filter — only the BX-53 All-in-One set (Ivan, 2026-10-16).
+// Set to null to show every Beyblade product again.
+const TARGET_FILTER = /\bBX[-\s]?53\b/i;
+const isTarget = (name) => !TARGET_FILTER || TARGET_FILTER.test(name || '');
+
 function tagOf(name){
   const s=(name||'').toUpperCase();
   if(/\bCX[- ]?\d|\bCX\b/.test(s))return'CX';
@@ -98,7 +103,7 @@ function render(){
 async function load(){
   try{
     const s=await(await fetch('data/state.json?'+Date.now())).json();
-    ITEMS=Object.values(s.items||{});
+    ITEMS=Object.values(s.items||{}).filter(i=>isTarget(i.name));
     $('#updated').textContent='更新於 '+fmtTime(s.updatedAt);
     $('#c-total').textContent=ITEMS.length;
     $('#c-in').textContent=ITEMS.filter(i=>i.status==='in').length;
@@ -111,7 +116,7 @@ async function load(){
   }catch(e){$('#rows').innerHTML='<tr><td colspan="5" class="empty">載入失敗：'+e.message+'</td></tr>';}
   try{
     const ev=await(await fetch('data/events.json?'+Date.now())).json();
-    const list=(ev.events||[]).slice(0,50);
+    const list=(ev.events||[]).filter(e=>isTarget(e.name)).slice(0,50);
     const label={restock:'🟢 返貨',oos:'🔴 售罄',new:'✨ 新品',price:'💲 改價'};
     $('#events').innerHTML=list.length?list.map(e=>
       `<div class="ev">${label[e.type]||e.type} · <b>${e.name||e.sku}</b> · ${e.store}
