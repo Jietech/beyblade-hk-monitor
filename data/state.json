@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1792139447777,
+  "updatedAt": 1792140347607,
   "count": 3,
   "stores": [
     {
@@ -7,42 +7,42 @@
       "name": "TClub HK",
       "ok": true,
       "count": 0,
-      "ms": 3437
+      "ms": 3209
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 1,
-      "ms": 487
+      "ms": 554
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 0,
-      "ms": 519
+      "ms": 545
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
       "count": 1,
-      "ms": 1101
+      "ms": 1149
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": 206
+      "ms": 194
     },
     {
       "id": "toysrus-watch",
       "name": "Watchlist (toysrus)",
       "ok": true,
       "count": 1,
-      "ms": 348
+      "ms": 332
     }
   ],
   "items": {
@@ -58,7 +58,7 @@
       "store": "amazonjp",
       "sku": "B0HJ75X3PN",
       "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-53 オールインワンセット",
-      "price": null,
+      "price": 371.61,
       "status": "in",
       "url": "https://www.amazon.co.jp/dp/B0HJ75X3PN"
     },
