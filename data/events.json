@@ -1,6 +1,19 @@
 {
-  "updatedAt": 1792130450070,
+  "updatedAt": 1792131349821,
   "events": [
+    {
+      "ts": 1792131349820,
+      "type": "price",
+      "from": null,
+      "to": 371.61,
+      "store": "amazonjp",
+      "sku": "B0HJ75X3PN",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-53 オールインワンセット",
+      "price": 371.61,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0HJ75X3PN",
+      "tag": "BX"
+    },
     {
       "ts": 1792110299680,
       "type": "new",
