@@ -1,48 +1,48 @@
 {
-  "updatedAt": 1792272651374,
-  "count": 3,
+  "updatedAt": 1792273550795,
+  "count": 4,
   "stores": [
     {
       "id": "tclub",
       "name": "TClub HK",
       "ok": true,
       "count": 0,
-      "ms": 6153
+      "ms": 5522
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 1,
-      "ms": 639
+      "ms": 563
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 0,
-      "ms": 346
+      "ms": 332
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
-      "count": 1,
-      "ms": 1247
+      "count": 2,
+      "ms": 1191
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": 165
+      "ms": 210
     },
     {
       "id": "toysrus-watch",
       "name": "Watchlist (toysrus)",
       "ok": true,
       "count": 1,
-      "ms": 385
+      "ms": 359
     }
   ],
   "items": {
@@ -53,6 +53,14 @@
       "price": 799,
       "status": "in",
       "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-bx-53-deluxe-battle-entry-set"
+    },
+    "amazonjp:B0HMGJCGVN": {
+      "store": "amazonjp",
+      "sku": "B0HMGJCGVN",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-20 カスタマイズセット C",
+      "price": 327.49,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0HMGJCGVN"
     },
     "amazonjp:B0HJ75X3PN": {
       "store": "amazonjp",
