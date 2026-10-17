@@ -1,6 +1,17 @@
 {
-  "updatedAt": 1792274452101,
+  "updatedAt": 1792275347303,
   "events": [
+    {
+      "ts": 1792275347302,
+      "type": "new",
+      "store": "amazonjp",
+      "sku": "B0HMGJCGVN",
+      "name": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-20 カスタマイズセット C",
+      "price": null,
+      "status": "in",
+      "url": "https://www.amazon.co.jp/dp/B0HMGJCGVN",
+      "tag": "CX"
+    },
     {
       "ts": 1792273550795,
       "type": "new",
