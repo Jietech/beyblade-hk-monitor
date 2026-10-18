@@ -1,6 +1,19 @@
 {
-  "updatedAt": 1792318550810,
+  "updatedAt": 1792319450065,
   "events": [
+    {
+      "ts": 1792319450063,
+      "type": "oos",
+      "from": "in",
+      "to": "out",
+      "store": "toytoy",
+      "sku": "takara-tomy-beyblade-x-bx-53-deluxe-battle-entry-set",
+      "name": "Takara Tomy 爆旋陀螺X - BX-53 豪華對戰入門套裝",
+      "price": 799,
+      "status": "out",
+      "url": "https://www.toytoy.com.hk/products/takara-tomy-beyblade-x-bx-53-deluxe-battle-entry-set",
+      "tag": "BX"
+    },
     {
       "ts": 1792317650291,
       "type": "price",
