@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1792289749898,
+  "updatedAt": 1792290650411,
   "count": 3,
   "stores": [
     {
@@ -7,42 +7,42 @@
       "name": "TClub HK",
       "ok": true,
       "count": 0,
-      "ms": 5579
+      "ms": 5474
     },
     {
       "id": "toytoy",
       "name": "ToyToy HK",
       "ok": true,
       "count": 1,
-      "ms": 442
+      "ms": 454
     },
     {
       "id": "moonroad",
       "name": "Moonroad HK",
       "ok": true,
       "count": 0,
-      "ms": 230
+      "ms": 309
     },
     {
       "id": "amazonjp",
       "name": "Amazon JP",
       "ok": true,
       "count": 1,
-      "ms": 1087
+      "ms": 1139
     },
     {
       "id": "toysrus",
       "name": "ToysRUs HK",
       "ok": true,
       "count": 0,
-      "ms": -1042
+      "ms": 160
     },
     {
       "id": "toysrus-watch",
       "name": "Watchlist (toysrus)",
       "ok": true,
       "count": 1,
-      "ms": 349
+      "ms": 355
     }
   ],
   "items": {
